@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Pokemons</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-light">
+  <main class="site-main">
+    <ul class="site-main__list cotigoriya js-catigories-list">
+      <li class="cotigoriya__list-item js-type-link">
+        <a class="cotigoriya__list-link cotigoriya__list-link--active js-catigories-item" data-datatype="all" href="#">ALL</a>
+      </li>
+    </ul>
+
+
+    <div class="main-content">
+      <form class="main-content__form js-from" action="#" method="GET">
+        <input class="main-content__input js-search-input" type="text" placeholder="Pokemon name e.g. Pikachu" autocomplet="off">
+      </form>
+
+      <ul class="list-unstyled pt-5 d-flex flex-md-wrap justify-content-around card-list js-pokemons-list"></ul>
+
+    </div>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog m-modal-width" role="document">
+      <div class="modal-content m-modal-border js-madal-wrapper">
+        <div class="d-flex align-items-start mt-0 d-none">
+          <button class="m-4 close m-dismismodal-btn btn" type="button" data-dismiss="modal" aria-label="Close">X</button>
+          <div class="modal-inner-left d-flex flex-column align-items-center">
+            <img class="rounded-circle mb-4 js-modal-img" src="" alt="">
+            <h2 class="js-m-pokemon-title pokimon-title">BULBASAUR</h2>
+          </div>
+
+          <div class="modal-inner-right">
+            <div class="m-description">
+              <h4 class="m-description-title d-inline-block">DESCRIPTION</h4>
+              <p class="js-m-modal-description-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat distinctio blanditiis corporis autem exercitationem labore molestiae harum! Dolores maiores provident, corrupti quisquam reprehenderi, cum.</p>
+            </div>
+            <div class="m-description mb-5">
+              <h4 class="m-description-title d-inline-block mb-4">EVOLUTIONS</h4>
+              <div class="description-inner d-flex mx-auto">
+                <div class="m-evolution-inner d-flex flex-column align-items-center mx-auto">
+                  <img class="m-js-evalution-img rounded-circle mb-3" width="130" height="130" src="" alt="">
+                  <p class="js-evalution-1 h5">SQUIRTLE</p>
+                </div>
+                <div class="m-evolution-inner d-flex flex-column align-items-center mx-auto">
+                  <img class="m-js-evalution-img rounded-circle mb-3" width="130" height="130" src="" alt="">
+                  <p class="js-evalution-1 h5">SQUIRTLE</p>
+                </div>
+                <div class="m-evolution-inner d-flex flex-column align-items-center mx-auto">
+                  <img class="m-js-evalution-img rounded-circle mb-3" width="130" height="130" src="" alt="">
+                  <p class="js-evalution-1 h5">SQUIRTLE</p>
+                </div>
+              </div>
+            </div>
+
+            <ul class="result">
+              <h4 class="m-description-title d-inline-block mb-4">STATS</h4>
+              <li class="result__item">
+                <p class="result__text">HP</p>
+                <span class="result__count">
+                  <span class="result__span">1</span>
+                </span>
+                <p class="result__text">67</p>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- catigories templete -->
+  <template class="catigories-templete catigorya-template">
+    <li class="cotigoriya__list-item">
+      <a class="cotigoriya__list-link cotigoriya__list-link--active js-catigories-item" href="#">ALL</a>
+    </li>
+  </template>
+
+  <template class="card-templete card-template">
+    <li class="pokemon-card__item bg-white position-relative" data-toggle="modal" data-target="#exampleModal">
+        <a class="streched-link text-decoration-none js-card-link" href="#">
+          <img class="pokemon__img mx-auto d-block js-pokemon-img" src="" alt="" width="130" height="130">
+          <h4 class="text-center text-dark mt-3 mb-2 js-pokemon-name">Bulbasaur</h3>
+            <p class="text-center my-0">Seed pokemon</p>
+            <div class="d-flex justify-content-center mt-1 align-items-center js-spanbox">
+              <!-- <span class="mr-3 font-weight-bold text-card-info">Poison</span> -->
+              <!-- <span class="ml-3 font-weight-bold text-card-succes">Grass</span> -->
+            </div>
+            <div class="d-flex justify-content-center mt-4">
+              <span class="mr-5 font-weight-light">Chlorophyl</span>
+              <span class="ml-5 font-weight-light">Overgrow</span>
+            </div>
+            <div class="pokemon__stat pokemon__stat--height">0.7m</div>
+            <div class="pokemon__stat pokemon__stat--width">6.9kg</div>
+        </a>
+      </li>
+    </template>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/pokemons.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+  </html>
